@@ -1,0 +1,7 @@
+apify_storage
+node_modules
+package-lock.json
+.idea
+payloads
+
+apify_storage

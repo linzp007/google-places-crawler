@@ -1,0 +1,34 @@
+{
+    "searchStringsArray": [
+      "restaurant"
+    ],
+    "maxCrawledPlaces": 999999,
+    "language": "en",
+    "maxReviews": 5,
+    "maxImages": 2,
+    "includeHistogram": true,
+    "includeOpeningHours": true,
+    "includePeopleAlsoSearch": true,
+    "additionalInfo": true,
+    "reviewsSort": "mostRelevant",
+    "reviewsTranslation": "originalAndTranslated",
+    "exportPlaceUrls": false,
+    "county": "orange",
+    "zoom": 12,
+    "proxyConfig": {
+      "useApifyProxy": true
+    },
+    "maxConcurrency": 100,
+    "maxPageRetries": 6,
+    "pageLoadTimeoutSec": 60,
+    "maxPagesPerBrowser": 1,
+    "useChrome": false,
+    "debug": false,
+    "useStealth": false,
+    "scrapeReviewerName": true,
+    "scrapeReviewerId": true,
+    "scrapeReviewerUrl": true,
+    "scrapeReviewId": true,
+    "scrapeReviewUrl": true,
+    "scrapeResponseFromOwnerText": true
+  }

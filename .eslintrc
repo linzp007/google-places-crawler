@@ -1,0 +1,17 @@
+{
+    "extends": "@apify",
+    "env": {
+        "node": true,
+        "browser": true
+    },
+    "rules": {
+        "no-confusing-arrow":"off",
+        "camelcase": "off",
+        "no-continue": "off",
+        "no-throw-literal": "off",
+        "object-property-newline": "off",
+        "no-underscore-dangle": "off",
+        "prefer-destructuring": "off",
+        "operator-linebreak": "off"
+    }
+}

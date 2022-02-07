@@ -1,0 +1,27 @@
+{
+    "searchStringsArray": [
+    "place_id:ChIJP5nxT0GFqkARaC_yB683x3o"
+    ],
+    "maxCrawledPlaces": 2,
+    "language": "en",
+    "maxReviews": 99999,
+    "maxImages": 1,
+    "includeHistogram": true,
+    "includeOpeningHours": false,
+    "includePeopleAlsoSearch": false,
+    "additionalInfo": false,
+    "reviewsSort": "mostRelevant",
+    "reviewsTranslation": "onlyTranslated",
+    "exportPlaceUrls": false,
+    "country": "Bulgaria",
+    "state": "Sofia",
+    "city": "Sofia",
+    "cachePlaces": false,
+    "useCachedPlaces": false,
+    "proxyConfig": {
+    "useApifyProxy": true
+    },
+    "useChrome": false,
+    "debug": false,
+    "useStealth": false
+    }

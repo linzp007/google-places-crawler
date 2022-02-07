@@ -1,0 +1,427 @@
+{
+    "title": "Google Maps Scraper",
+    "description": "Provide either a list of search keywords or search/place URLs. It is better to set location in the Geolocation settings below rather than add into the search terms. You will get more results and they will be accurate.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "List of URLs to be crawled. They can be search URLs or place URLs. The only valid format for URLs contains either /maps/search or /maps/place",
+            "editor": "requestListSources"
+        },
+        "searchStringsArray": {
+            "title": "Search Terms",
+            "type": "array",
+            "description": "Array of strings to be searched. It is also possible to fill in Google Place IDs in the format place_id:ChIJp4JiUCNP0xQR1JaSjpW_Hms. Setting geolocation input fields is more accurate than including location in the search string.",
+            "editor": "stringList",
+            "prefill": [
+                "restaurant New York"
+            ]
+        },
+        "maxCrawledPlaces": {
+            "title": "Max crawled places",
+            "type": "integer",
+            "description": "Maximum number of places you scrape per whole run. If you want to scrape all available, set this to `9999999`.",
+            "prefill": 10,
+            "minimum": 1
+        },
+        "maxCrawledPlacesPerSearch": {
+            "title": "Max crawled places per search",
+            "type": "integer",
+            "description": "Maximum number of places you scrape per search term. If you want to scrape all available, set this to `9999999`.",
+            "minimum": 1
+        },
+        "language": {
+            "title": "Language",
+            "description": "Force showing results in this language.",
+            "enum": [
+                "en",
+                "af",
+                "az",
+                "id",
+                "ms",
+                "bs",
+                "ca",
+                "cs",
+                "da",
+                "de",
+                "et",
+                "es",
+                "es-419",
+                "eu",
+                "fil",
+                "fr",
+                "gl",
+                "hr",
+                "zu",
+                "is",
+                "it",
+                "sw",
+                "lv",
+                "lt",
+                "hu",
+                "nl",
+                "no",
+                "uz",
+                "pl",
+                "pt-BR",
+                "pt-PT",
+                "ro",
+                "sq",
+                "sk",
+                "sl",
+                "fi",
+                "sv",
+                "vi",
+                "tr",
+                "el",
+                "bg",
+                "ky",
+                "kk",
+                "mk",
+                "mn",
+                "ru",
+                "sr",
+                "uk",
+                "ka",
+                "hy",
+                "iw",
+                "ur",
+                "ar",
+                "fa",
+                "am",
+                "ne",
+                "hi",
+                "mr",
+                "bn",
+                "pa",
+                "gu",
+                "ta",
+                "te",
+                "kn",
+                "ml",
+                "si",
+                "th",
+                "lo",
+                "my",
+                "km",
+                "ko",
+                "ja",
+                "zh-CN",
+                "zh-TW"
+            ],
+            "enumTitles": [
+                "English",
+                "‪Afrikaans‬",
+                "‪azərbaycan‬",
+                "‪BahasaIndonesia‬",
+                "‪BahasaMelayu‬",
+                "‪bosanski‬",
+                "‪català‬",
+                "‪Čeština‬",
+                "‪Dansk‬",
+                "‪Deutsch (Deutschland)‬",
+                "‪eesti‬",
+                "‪Español (España)‬",
+                "‪Español (Latinoamérica)‬",
+                "‪euskara‬",
+                "‪Filipino‬",
+                "‪Français (France)‬",
+                "‪galego‬",
+                "‪Hrvatski‬",
+                "‪isiZulu‬",
+                "‪íslenska‬",
+                "‪Italiano‬",
+                "‪Kiswahili‬",
+                "‪latviešu‬",
+                "‪lietuvių‬",
+                "‪magyar‬",
+                "‪Nederlands‬",
+                "‪norsk‬",
+                "‪oʻzbekcha‬",
+                "‪polski‬",
+                "‪Português (Brasil)‬",
+                "‪Português (Portugal)‬",
+                "‪română‬",
+                "‪shqip‬",
+                "‪Slovenčina‬",
+                "‪slovenščina‬",
+                "‪Suomi‬",
+                "‪Svenska‬",
+                "‪TiếngViệt‬",
+                "‪Türkçe‬",
+                "‪Ελληνικά‬",
+                "‪български‬",
+                "‪кыргызча‬",
+                "‪қазақтілі‬",
+                "‪македонски‬",
+                "‪монгол‬",
+                "‪Русский‬",
+                "‪српски (ћирилица)‬",
+                "‪Українська‬",
+                "‪ქართული‬",
+                "‪հայերեն‬",
+                "‫עברית‬",
+                "‫اردو‬",
+                "‫العربية‬",
+                "‫فارسی‬",
+                "‪አማርኛ‬",
+                "‪नेपाली‬",
+                "‪हिन्दी‬",
+                "‪मराठी‬",
+                "‪বাংলা‬",
+                "‪ਪੰਜਾਬੀ‬",
+                "‪ગુજરાતી‬",
+                "‪தமிழ்‬",
+                "‪తెలుగు‬",
+                "‪ಕನ್ನಡ‬",
+                "‪മലയാളം‬",
+                "‪සිංහල‬",
+                "‪ไทย‬",
+                "‪ລາວ‬",
+                "‪ဗမာ‬",
+                "‪ខ្មែរ‬",
+                "‪한국어",
+                "‪日本語",
+                "‪简体中文",
+                "‪繁體中文"
+            ],
+            "type": "string",
+            "editor": "select",
+            "default": "en",
+            "example": "en",
+            "prefill": "en"
+        },
+        "exportPlaceUrls": {
+            "title": "Export place URLs only (skips place details)",
+            "type": "boolean",
+            "description": "Scraper will return only place URLs without crawling their details.",
+            "default": false,
+            "sectionCaption": "Output configuration",
+            "sectionDescription": "You can set what extra information you would like extracted. For maximum efficiency, the default setup doesn't include reviews or images. If you need these, just increase the maximum count for them."
+        },
+        "includeHistogram": {
+            "title": "Include popular times",
+            "type": "boolean",
+            "description": "If checked, the crawler scrapes popular times for all places. You can speed up crawling if you disable this.",
+            "default": false
+        },
+        "includeOpeningHours": {
+            "title": "Include opening hours",
+            "type": "boolean",
+            "description": "If checked, the crawler scrapes opening hours for all places. You can speed up crawling if you disable this.",
+            "default": false
+        },
+        "includePeopleAlsoSearch": {
+            "title": "Include people also search",
+            "type": "boolean",
+            "description": "If checked, the crawler scrapes \"people also search\" for all places. You can speed up crawling if you disable this.",
+            "default": false
+        },
+        "additionalInfo": {
+            "title": "Additional Place Info",
+            "type": "boolean",
+            "description": "Extract additional information about each place, e.g. Service Options, Highlights, Offerings, etc. You can speed up crawling if you disable this.",
+            "default": false
+        },
+        "maxImages": {
+            "title": "Number of images (Slow for more than 1)",
+            "type": "integer",
+            "description": "Max number of images per place to scrape. If you fill in 0 or nothing, no images will be scraped. For all images, just put 99999",
+            "prefill": 0,
+            "unit": "images per place"
+        },
+        "maxReviews": {
+            "title": "Number of reviews (slow)",
+            "type": "integer",
+            "description": "Max number of reviews per place to scrape. If you fill in 0 or nothing, no reviews will be scraped. For all reviews, just put 99999",
+            "prefill": 0,
+            "unit": "reviews per place"
+        },
+        "reviewsSort": {
+            "title": "Sort reviews by",
+            "description": "Define how reviews should be sorted.",
+            "type": "string",
+            "editor": "select",
+            "default": "newest",
+            "enum": [
+                "newest",
+                "mostRelevant",
+                "highestRanking",
+                "lowestRanking"
+            ],
+            "enumTitles": [
+                "Newest",
+                "Most relevant",
+                "Highest ranking",
+                "Lowest ranking"
+            ]
+        },
+        "reviewsTranslation": {
+            "title": "Reviews translation",
+            "type": "string",
+            "description": "Google automatically adds translated text to the original. You can adjust this behavior here.",
+            "editor": "select",
+            "default": "originalAndTranslated",
+            "enum": [
+                "originalAndTranslated",
+                "onlyOriginal",
+                "onlyTranslated"
+            ],
+            "enumTitles": [
+                "Original & translated (Google's default)",
+                "Only original",
+                "Only translated"
+            ]
+        },
+        "scrapeReviewerName": {
+            "title": "Reviewer name",
+            "type": "boolean",
+            "description": "Extract Reviewer name",
+            "default": true,
+            "sectionCaption": "Personal data (reviews only)",
+            "sectionDescription": "All of these fields contain personal data. Personal data is protected by the GDPR in the European Union and by other regulations around the world. You should not scrape personal data unless you have a legitimate reason to do so. If you're unsure whether your reason is legitimate, consult your lawyers."
+        },
+        "scrapeReviewerId": {
+            "title": "Reviewer ID",
+            "type": "boolean",
+            "description": "Extract Reviewer ID",
+            "default": true
+        },
+        "scrapeReviewerUrl": {
+            "title": "Reviewer URL",
+            "type": "boolean",
+            "description": "Extract Reviewer URL",
+            "default": true
+        },
+        "scrapeReviewId": {
+            "title": "Review ID",
+            "type": "boolean",
+            "description": "Extract Review ID",
+            "default": true
+        },
+        "scrapeReviewUrl": {
+            "title": "Review URL",
+            "type": "boolean",
+            "description": "Extract Review URL",
+            "default": true
+        },
+        "scrapeResponseFromOwnerText": {
+            "title": "Response from owner",
+            "type": "boolean",
+            "description": "Extract Response from owner",
+            "default": true
+        },
+        "country": {
+            "title": "Country",
+            "type": "string",
+            "description": "Set the country where the search should be performed, e.g. 'USA'.",
+            "editor": "textfield",
+            "sectionCaption": "Geolocation",
+            "sectionDescription": "Here you can set where places should be searched. Prefer using any combination of country, state, county, city or postal code to get maximum results. This scraper automatically chooses appropriate map zoom and splits the map into many smaller searches to catch as many places as possible. Currently, the scraper doesn't work well for full country searching of sparsely populated countries like USA or Russia. For these, prefer searching city by city or focus on populated states. Latitude and longitude or polygon don't have this functionality and will yield less results (but are faster)."
+        },
+        "state": {
+            "title": "State",
+            "type": "string",
+            "description": "Set a state where the search should be performed, e.g. 'Massachusetts', 'England', 'Berlin', etc.",
+            "editor": "textfield"
+        },
+        "county": {
+            "title": "County",
+            "type": "string",
+            "description": "Set the county where the search should be performed, e.g. 'washington'.",
+            "editor": "textfield"
+        },
+        "city": {
+            "title": "City",
+            "type": "string",
+            "description": "Set the city where the search should be performed, e.g. 'Pittsfield'.",
+            "editor": "textfield"
+        },
+        "postalCode": {
+            "title": "Postal code",
+            "type": "string",
+            "description": "Set the postal code where the search should be performed, e.g. 10001. Select a country as well to ensure the correct postal code is used.",
+            "editor": "textfield"
+        },
+        "lat": {
+            "title": "Viewport point latitude",
+            "type": "string",
+            "description": "Use in combination with longitude and zoom to set the viewport to search on. Do not combine with country/state/city/postal parameters (prefer those)",
+            "editor": "textfield"
+        },
+        "lng": {
+            "title": "Viewport point longitude",
+            "type": "string",
+            "description": "Use in combination with latitude and zoom to set the viewport to search on. Do not combine with country/state/city/postal parameters (prefer those)",
+            "editor": "textfield"
+        },
+        "zoom": {
+            "title": "Viewport zoom level",
+            "type": "integer",
+            "description": "You don't need to set this parameter. A good value is chosen automatically based on geolocation, see <a href='https://apify.com/drobnikj/crawler-google-places#automatic-zooming' target='_blank' rel='noopener'>readme</a> for more info.",
+            "minimum": 1,
+            "maximum": 21
+        },
+        "maxAutomaticZoomOut": {
+            "title": "Max automatic zoom out",
+            "type": "integer",
+            "description": "Parameter to stop searching once Google zooms out too far. It counts how far it zoomed out compared to the first page. Keep in mind that `zoom: 1` is the whole world and `zoom: 21` is a tiny street. So usually you want `maxAutomaticZoomOut` to be between `0` and `5`. Also, keep in mind that Google zooms a bit differently in each run.",
+            "minimum": 0,
+            "maximum": 10
+        },
+        "customGeolocation": {
+            "title": "Custom geolocation",
+            "type": "object",
+            "editor": "json",
+            "description": "Custom geolocation to define exact search area if other geolocation parameters don't work well. See see <a href='https://apify.com/drobnikj/crawler-google-places#custom-geolocation' target='_blank' rel='noopener'>readme</a> for details."
+        },
+        "proxyConfig": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "description": "You need to use Apify proxy or custom proxies. Automatic proxy works very well for Google Maps.",
+            "prefill": {
+                "useApifyProxy": true
+            },
+            "editor": "proxy",
+            "sectionCaption": "Browser, page and proxy settings",
+            "sectionDescription": "How the browsers will behave during the scraping process."
+        },
+        "maxConcurrency": {
+            "title": "Max concurrency",
+            "type": "integer",
+            "description": "Maximum number of pages that will be processed in parallel. This is usually limited by the memory assigned to the run.",
+            "minimum": 0,
+            "maximum": 1000,
+            "default": 100
+        },
+        "maxPageRetries": {
+            "title": "Max page retries",
+            "type": "integer",
+            "description": "Maximum number of retries when page scraping fails. Set to 0 if you are getting repeated errors where retrying does not help (and report to support@apify.com or create new issue)",
+            "minimum": 0,
+            "maximum": 1000,
+            "default": 6
+        },
+        "pageLoadTimeoutSec": {
+            "title": "Page load timeout seconds",
+            "type": "integer",
+            "description": "Maximum time in seconds to wait for the page to load.",
+            "minimum": 0,
+            "maximum": 1000,
+            "default": 60
+        },
+        "maxPagesPerBrowser": {
+            "title": "Max opened pages per browser",
+            "type": "integer",
+            "description": "How many pages can be opened at once for each browser. Having more pages in one browser is faster but can lead to increased blocking.",
+            "minimum": 0,
+            "maximum": 100,
+            "default": 1
+        }
+    },
+    "required": [
+        "proxyConfig"
+    ]
+}
